@@ -31,9 +31,9 @@ print(num_translate_adv(number_2))
 # Задание 3
 
 
-def my_function(*names):
+def my_function(*args):
     my_dict = {}
-    for name in names:
+    for name in args:
         my_dict.setdefault(name[0], [])
         my_dict[name[0]].append(name)
     return my_dict
@@ -44,7 +44,6 @@ print(my_function('Артем', 'Александр', 'Михаил', 'Макс�
 
 # Задание 5
 
-
 import random
 
 nouns = ["автомобиль", "лес", "огонь", "город", "дом"]
@@ -52,14 +51,14 @@ adverbs = ["сегодня", "вчера", "завтра", "позавчера",
 adjectives = ["веселый", "яркий", "зеленый", "утопичный", "мягкий"]
 
 
-def get_jokes(num):
-
+def get_jokes(i):
     joke = []
-    for i in range(num):
+    for elem in range(i):
         noun = random.choice(nouns)
         adverb = random.choice(adverbs)
         adjective = random.choice(adjectives)
         joke.append(f'{noun} {adverb} {adjective}')
-    return joke
+        return joke
+
 
 print(get_jokes(3))
